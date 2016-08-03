@@ -8,10 +8,10 @@ from keras.callbacks import ModelCheckpoint
 from keras.utils import np_utils
 import nltk
 # load ascii text and covert to lowercase
-filename = "romantyzm.txt"
+filename = "splitaa"
 raw_text = open(filename).read()
 raw_text = raw_text.lower()
-raw_text = nltk.word_tokenize(raw_text)
+#raw_text = nltk.word_tokenize(raw_text)
 # create mapping of unique chars to integers, and a reverse mapping
 chars = sorted(list(set(raw_text)))
 char_to_int = dict((c, i) for i, c in enumerate(chars))
@@ -21,7 +21,7 @@ n_vocab = len(chars)
 print "Total Characters: ", n_chars
 print "Total Vocab: ", n_vocab
 # prepare the dataset of input to output pairs encoded as integers
-seq_length = 10
+seq_length = 100
 dataX = []
 dataY = []
 for i in range(0, n_chars - seq_length, 1):
