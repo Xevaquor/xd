@@ -6,7 +6,6 @@ from keras.layers import Dropout
 from keras.layers import LSTM
 from keras.callbacks import ModelCheckpoint
 from keras.utils import np_utils
-import nltk
 # load ascii text and covert to lowercase
 filename = "splitaa"
 raw_text = open(filename).read()
